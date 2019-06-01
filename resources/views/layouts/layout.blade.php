@@ -147,9 +147,9 @@
     }); // end of document ready
 
 </script>
-<script src="{{ asset('/js/app.js?v='. time()) }}"></script>
+<script src="{{ asset('/js/app.js') }}"></script>
 <script src="{{ asset('/js/ion.js') }}"></script>
-<script src="{{ asset('/assets/js/main.js?v='.time()) }}"></script>
+<script src="{{ asset('/assets/js/main.js') }}"></script>
 
 
 @yield('js')
