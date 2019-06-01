@@ -23,11 +23,12 @@ class UserController extends Controller {
     }
 
     public function setting(Request $request){
-        $request->validate([
-            'name' => 'required|max:25',
-        ]);
+
         $user = auth()->user();
         if($request->post()){
+            $request->validate([
+                'name' => 'required|max:25',
+            ]);
             $avatar = $request->file('avatar')? "/storage/" . $request->file('avatar')->store('avatars', 'public'): $user->avatar;
             $user->update([
                 'name'   => $request->post('name'),
