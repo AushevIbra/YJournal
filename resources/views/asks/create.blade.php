@@ -17,7 +17,7 @@
             @endif
             <div class="row">
                 <div class="input-field col s12">
-                    <input placeholder="Укажите тему Вашего вопроса *" name="title"  type="text" class="validate">
+                    <input placeholder="Укажите тему Вашего вопроса *" value="{{old('title')}}"  name="title"  type="text" class="validate">
                     <span class="helper-text" data-error="wrong" data-success="right"></span>
 
                     <label for="first_name">Тема вопроса</label>
