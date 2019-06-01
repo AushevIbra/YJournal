@@ -22,7 +22,9 @@ main {
 .page-footer {
     background-color: #282828;
 }
-
+#react-posts .card:last-child {
+    margin-bottom: 40px;
+}
 .popup-login {
     position: fixed;
     visibility: hidden;
