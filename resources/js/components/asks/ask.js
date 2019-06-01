@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import AskItem from "./AskItem";
 import MorePost from "../posts/MorePost";
+import NoPost from "../posts/noPost";
 
 
 class Ask extends Component {
