@@ -14,9 +14,9 @@
                 </div>
                 <div class="d-flex" style="font-size: 0.8rem; color: rgba(167, 167, 167, 0.87);">
                     <p><strong>Добавлено:</strong> {{$ask->created_at}}</p>
-                    <p style="margin-left: 3px;"><strong>Просмотров:</strong> {{$ask->views}}</p>
-                    <p style="margin-left: 3px;"><strong>Рейтинг:</strong> {{$ask->rating}}</p>
-                    <p style="margin-left: 3px;"><strong>Ответов:</strong> {{$ask->countAnswers->count()}}</p>
+                    {{--<p style="margin-left: 3px;"><strong>Просмотров:</strong> {{$ask->views}}</p>--}}
+                    {{--<p style="margin-left: 3px;"><strong>Рейтинг:</strong> {{$ask->rating}}</p>--}}
+                    {{--<p style="margin-left: 3px;"><strong>Ответов:</strong> {{$ask->countAnswers->count()}}</p>--}}
                     <p style="margin-left: 3px;"><strong>Пользователь:</strong> {{$ask->user->name}}</p>
                 </div>
             </div>
