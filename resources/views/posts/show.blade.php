@@ -18,14 +18,13 @@
                         </a>
                         <div class="post-meta-date">{{$data->created_at->diffForHumans()}}</div>
                         <div class="post-stat">
-                            <div class="post-views">336</div>
+                            <div class="post-views">{{$data->views}}</div>
                         </div>
                     </div>
                 </div>
                 <h1>{{$data->title}}</h1>
-
                 <div class="post-extra">
-                    <a href="#comments" class="post-comments grl">18 комментариев</a>
+                    <a href="#comments" class="post-comments grl">{{$data->count_comments_count}}</a>
                     <div class="share">
                         <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                         <script src="//yastatic.net/share2/share.js"></script>

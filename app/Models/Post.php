@@ -76,7 +76,7 @@ class Post extends Model
 
     public function findPost($slugString)
     {
-        $data = Post::with(['user', 'tags'])->where('slug', $slugString)->first();
+        $data = Post::with(['user'])->withCount("countComments")->where('slug', $slugString)->first();
 
         return $data;
     }
