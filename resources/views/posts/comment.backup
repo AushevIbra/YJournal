@@ -1,0 +1,61 @@
+@foreach($comments as $comment)
+<div class="row">
+    <div class="col s12">
+        <div class="card">
+
+            <div class="card-content">
+                {{$comment->text}}
+            </div>
+
+            <div class="card-action">
+                <div class="row">
+
+                    <div class="col m6 s6">
+                        <div style="display: flex;">
+                            <div
+                                style="background: url('{{$comment->user->avatar}}'); height: 25px; width: 25px; background-size: contain; border-radius: 50%;"></div>
+                            <a href="{{route('user.profile', $comment->user->id)}}" class="grey-text">&nbsp;{{$comment->user->name}}</a>
+                        </div>
+                    </div>
+
+                    <div class="col m6 s6 right-align">
+                        <i class="material-icons">mood</i> 1 |
+                        <i class="material-icons">mood_bad</i> 1
+                    </div>
+
+                    <div class="col m12 s12" style="margin-top: 5px;">
+                        <a href="javascript:void(0)" class="btn site-color btn-block"><i class="material-icons">reply</i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @foreach(\App\Models\Comment::where("parent_id", $comment->id)->get() as $childComment)
+    <div class="col s11 offset-s1">
+        <div class="card">
+            <div class="card-content">
+
+                {{$childComment->text}}
+            </div>
+
+            <div class="card-action" style="display: flex; justify-content: space-between;">
+                <a href="#" class="btn site-color"><i class="material-icons">reply</i></a>
+
+                <div style="display: flex;">
+                    <div
+                        style="background: url('{{$comment->user->avatar}}'); height: 25px; width: 25px; background-size: contain; border-radius: 50%;"></div>
+                    <a href="{{route('user.profile', $comment->user->id)}}" class="grey-text">&nbsp;{{$comment->user->name}}</a>
+                </div>
+
+                <div class="right-align">
+                    <i class="material-icons">mood</i> 1 |
+                    <i class="material-icons">mood_bad</i> 1
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @endforeach
+</div>
+@endforeach
