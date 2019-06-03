@@ -11,6 +11,10 @@ main {
     flex: 1 0 auto;
 }
 
+blockquote {
+    border-left-color: #c2c2c2 !important;
+}
+
 .nav-color {
     background-color: #4f9ff2;
 }
@@ -22,9 +26,73 @@ main {
 .page-footer {
     background-color: #282828;
 }
+
+.attach img {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%
+}
+
 #react-posts .card:last-child {
     margin-bottom: 40px;
 }
+
+.notifications__item-avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.notifications__item-avatar:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    bottom: -6px;
+    right: -6px;
+    background: #4794e6;
+}
+
+.notification-mobile:before {
+    bottom: 6px;
+}
+
+
+.notifications__item-avatar:after {
+    display: block;
+    position: absolute;
+    font-weight: 600;
+    font-size: 9px;
+    color: #fff;
+    bottom: 0px;
+    right: -1px;
+    top: 3px;
+}
+
+.notif-like:after {
+    content: "\F164";
+    font-family: Font Awesome\ 5 Free;
+}
+
+.notif-disslike:after {
+    content: "\F165";
+    font-family: Font Awesome\ 5 Free;
+}
+
+.notification-mobile:after {
+    right: -1px;
+    top: unset;
+    bottom: 10px;
+}
+
 .popup-login {
     position: fixed;
     visibility: hidden;
@@ -357,6 +425,100 @@ main {
     color: rgba(167, 167, 167, 0.87);
     display: flex;
     justify-content: space-between;
+}
+
+.card-meta {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px 25px 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.post-options {
+    position: relative;
+}
+
+.post-option-control {
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.post-options .post-option-control #dots {
+    fill: #797979;
+    margin-bottom: 2px;
+}
+
+.post-options-dropdown {
+    position: absolute;
+    right: -10px;
+    top: 25px;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    border: 1px solid #eaefec;
+    padding: 15px 25px;
+    z-index: 888;
+    width: 150px;
+}
+
+.post-options-dropdown a {
+    display: block;
+    line-height: 2.2;
+}
+
+.delimiter {
+    line-height: 1.6em;
+    width: 100%;
+    text-align: center;
+}
+
+.delimiter:before {
+    display: inline-block;
+    content: "***";
+    font-size: 30px;
+    line-height: 65px;
+    height: 30px;
+    letter-spacing: 0.2em;
+}
+
+
+.post-options-dropdown:before {
+    content: "";
+    top: 0;
+    margin-top: -16px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #eaefec;
+    position: absolute;
+    right: 10px;
+}
+
+.post-options-dropdown:after {
+    content: "";
+    top: 0;
+    margin-top: -15px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    position: absolute;
+    right: 10px;
+}
+
+.post-options-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0);
+    transform: translate(0);
 }
 
 .active_city {
@@ -756,11 +918,13 @@ main {
     position: absolute;
     z-index: 3;
 }
+
 .section-title {
     border-bottom: 1px solid #ededed;
     padding-bottom: 15px;
     margin-bottom: 15px;
 }
+
 .section-title span {
     opacity: .8;
     font-weight: 500;
@@ -769,10 +933,12 @@ main {
     letter-spacing: .08px;
     text-transform: uppercase;
 }
+
 .full-post {
     padding-bottom: 65px;
     margin-top: 25px;
 }
+
 .full-post h1 {
     font-weight: 600;
     font-size: 40px;
@@ -780,7 +946,7 @@ main {
     margin-top: 30px;
 }
 
-.full-post .post-meta>div:first-of-type {
+.full-post .post-meta > div:first-of-type {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -788,32 +954,38 @@ main {
     display: -ms-flexbox;
     display: flex;
 }
+
 .post-meta .post-meta-profile {
-    -webkit-box-flex: 0!important;
-    -ms-flex: 0!important;
-    flex: 0!important;
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important;
 }
+
 .post-meta .post-meta-profile {
     display: block;
     height: 20px;
 }
+
 .post-meta-profile {
     margin-right: 20px;
 }
+
 .post-meta-info, .post-meta-profile {
-    display: -webkit-box!important;
-    display: -ms-flexbox!important;
-    display: flex!important;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
 }
+
 .ggl {
     color: #4fa471;
     text-decoration: none;
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
+
 .post-meta .post-meta-profile .post-meta-avatar {
     width: 20px;
     height: 20px;
@@ -822,6 +994,7 @@ main {
     border-radius: 50%;
     float: left;
 }
+
 .post-meta .post-meta-profile .post-meta-name {
     display: block;
     line-height: 1;
@@ -831,10 +1004,12 @@ main {
     white-space: nowrap;
     max-width: 310px;
 }
+
 .post-meta a span {
-    display: inline-block!important;
+    display: inline-block !important;
     margin: 0 0 0 10px;
 }
+
 .post-meta .post-meta-date, .post-meta .post-stat {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -843,10 +1018,12 @@ main {
     -ms-flex-align: center;
     align-items: center;
 }
+
 .post-meta .post-meta-date {
     color: gray;
     margin-right: 20px;
 }
+
 .post-meta .post-meta-date, .post-meta .post-stat {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -855,6 +1032,7 @@ main {
     -ms-flex-align: center;
     align-items: center;
 }
+
 .post-meta .post-stat .post-views {
     position: relative;
     padding-left: 19px;
@@ -886,6 +1064,7 @@ main {
     padding-left: 20px;
     line-height: 24px;
 }
+
 .post-extra .post-comments:after {
     content: "\F086";
     display: block;
@@ -895,6 +1074,7 @@ main {
     left: 0;
     top: -1px;
 }
+
 .grl {
     color: gray;
     text-decoration: none;

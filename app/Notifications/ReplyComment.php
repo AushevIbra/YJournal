@@ -51,6 +51,7 @@ class ReplyComment extends Notification
             'message' => 'Пользователь ' . $this->comment->user->name . ' ответил на Ваш комментарий',
             'user' => $this->comment->user,
             'post' => $this->comment->post,
+            'type' => 'reply'
         ];
     }
 }

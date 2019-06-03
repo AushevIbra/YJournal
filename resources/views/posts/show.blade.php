@@ -1,7 +1,12 @@
 @extends('layouts.layout')
 @section('title', $data->title)
 
+@section('css')
+    <link rel="stylesheet" href="{{asset("css/zoom.css")}}">
+@endsection
+
 @section('content')
+
     <style>
         h2 {
             font-size: 1.56rem !important;
@@ -43,4 +48,5 @@
 
 @section('js')
     <script src="{{asset('js/comments.js')}}"></script>
+    <script src="{{asset("js/zoom.js")}}"></script>
 @endsection

@@ -1,6 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types';
-
 const NoPost = ({text, shadow}) => {
     return (
         <div className={`card-panel light lighten-5 z-depth-1 center ${shadow}`}>

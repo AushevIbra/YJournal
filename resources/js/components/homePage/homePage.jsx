@@ -12,7 +12,7 @@ import {applyMiddleware, createStore} from 'redux';
 import logger from 'redux-logger';
 import homePageReducer from '../../store/reducers/homePageReducer';
 
-const store = createStore(homePageReducer, applyMiddleware(logger));
+const store = createStore(homePageReducer);
 
 const HomePage = () => {
     useEffect(() => {

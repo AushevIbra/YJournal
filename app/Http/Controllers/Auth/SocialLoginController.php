@@ -10,18 +10,19 @@ use Laravel\Socialite\Facades\Socialite;
 class SocialLoginController extends Controller {
     public function vk(Request $request){
         $responseUser = Socialite::driver('vkontakte')->user();
-        $user = User::where('email', $responseUser->accessTokenResponseBody['email'])->first();
+
+        $user = User::where('uid', $responseUser->id)->first();
         if($user !== null){
             User::authUser($user);
 
-            return redirect()->back();
+            return redirect()->route('index');
         }
 
         $newUser = [
             'name'    => $responseUser->user['first_name'] . ' ' . $responseUser->user['last_name'],
             'avatar'  => $responseUser->user['photo'],
             'country' => $responseUser['country'] ?? '',
-            'email'   => $responseUser->accessTokenResponseBody['email'],
+            'email'   => $responseUser->email,
             'uid'     => $responseUser->id,
             'role'    => 'user',
             'network' => 'vk',

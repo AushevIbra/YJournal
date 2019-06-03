@@ -46,7 +46,7 @@ const MobileNotification = ({notifications,setNotifications}) => {
                     <div>
                         {notifications.map(item => {
                             return (
-                                <ListNotifications item={item} key={`${item.to}-${item.id}`}/>
+                                <ListNotifications item={item} key={`${item.id}`} isMobile={true}/>
                             )
                         })}
 

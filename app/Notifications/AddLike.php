@@ -2,30 +2,29 @@
 
 namespace App\Notifications;
 
-use App\Models\Comment;
+use App\Models\Rating;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class AddComment extends Notification
+class AddLike extends Notification
 {
     use Queueable;
-    private $message;
     /**
-     * @var Comment
+     * @var Rating
      */
-    private $comment;
+    private $rating;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct(Comment $comment)
+    public function __construct(Rating $rating)
     {
-        //
-        $this->comment = $comment;
+
+        $this->rating = $rating;
     }
 
     /**
@@ -39,12 +38,12 @@ class AddComment extends Notification
         return ['database'];
     }
 
-//    /**
-//     * Get the mail representation of the notification.
-//     *
-//     * @param  mixed  $notifiable
-//     * @return \Illuminate\Notifications\Messages\MailMessage
-//     */
+    /**
+     * Get the mail representation of the notification.
+     *
+     * @param  mixed  $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
+     */
 //    public function toMail($notifiable)
 //    {
 //        return (new MailMessage)
@@ -61,11 +60,12 @@ class AddComment extends Notification
      */
     public function toArray($notifiable)
     {
+        $user = $this->rating->user;
         return [
-            'message' => 'Пользователь ' . $this->comment->user->name . ' прокомментировал Ваш пост',
-            'user' => $this->comment->user,
-            'post' => $this->comment->post,
-            'type' => 'add-comment'
+            'message' => 'Пользователь ' . $user->name . ' оценил Ваш пост',
+            'user' => $user,
+            'post' => $this->rating->post,
+            'type' => ($this->rating->type == 1) ? "like" : "disslike",
         ];
     }
 }

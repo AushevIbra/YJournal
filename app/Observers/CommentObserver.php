@@ -54,7 +54,7 @@ class CommentObserver {
      * @return void
      */
     public function deleted(Comment $comment){
-        //
+        Notification::where([['notifiable_type', "App\Models\Comment"], ['notifiable_id', $comment->id]])->delete();
     }
 
     /**
