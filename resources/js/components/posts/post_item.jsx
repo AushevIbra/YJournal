@@ -26,7 +26,7 @@ const PostItem = ({item, addClass, setLike, setDisslike}) => {
                     <span className="card__desc-name">{item.user.name}</span>
                 </a>
                 <span className="card__desc-date">{date}  </span>
-                {window.user.id === item.user_id
+                {window.user && window.user.id === item.user_id
                 &&
                 <div className="post-options">
                     <div className="post-option-control" onClick={() => {
