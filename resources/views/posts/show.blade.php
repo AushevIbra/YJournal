@@ -1,6 +1,8 @@
+<?php $html = $codex->render(); $description = mb_substr(strip_tags($html), 0, 150);  ?>
 @extends('layouts.layout')
 @section('title', $data->title)
-
+@section('description', strlen($description) < 150 ? $description : $description . "...")
+@section("main_img", "https://$_SERVER[HTTP_HOST]".$data->main_img)
 @section('css')
     <link rel="stylesheet" href="{{asset("css/zoom.css")}}">
 @endsection
@@ -36,7 +38,7 @@
                         <div class="ya-share2" data-services="vkontakte,facebook,twitter,whatsapp,telegram"></div>
                     </div>
                 </div>
-                <?php  $codex->render(); ?>
+                {!! $html !!}
             </div>
 
             <div id="react-comments" data-post-id="{{$data->id}}"></div>

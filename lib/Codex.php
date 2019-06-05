@@ -112,9 +112,11 @@ BLOCK;
     }
 
     public function render(){
+        $html = "";
         foreach($this->html as $key => $value){
-            echo $value;
+            $html .= $value;
         }
+        return $html;
     }
 
     public function returnHtml(){

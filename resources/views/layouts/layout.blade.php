@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <title>@yield('title')</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
     <!-- CSS  -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -15,6 +17,35 @@
     <link rel="stylesheet" href="{{asset('css/brands.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/solid.min.css')}}"/>
+
+    <!-- Meta Zone -->
+    <meta name="robots" content="index, follow, all">
+    <meta name="geo.placename" content="@yield('title')">
+    <meta name="geo.region" content="RU">
+    <meta name="google" content="notranslate">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="@yield('title')">
+    <meta name="theme-color" content="#2a2a2a" />
+
+    <meta property="og:site_name" content="@yield('title')">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{"https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"}}">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="website">
+
+    <meta name="description" content="@yield('description')">
+    <meta property="og:title" content="@yield('title')">
+    <meta property="image" content="@yield('main_img')"> <!-- VK -->
+    <meta property="og:image" content="@yield('main_img')"> <!-- FB -->
+    <meta property="og:description" content="@yield('description')">
+
+    <meta name="twitter:image" content="@yield('main_img')"> <!-- Twitter -->
+    <meta name="twitter:title" content="@yield('title')">
+    <meta name="twitter:description" content="@yield('description')">
+
+
 
     @yield('css')
 </head>

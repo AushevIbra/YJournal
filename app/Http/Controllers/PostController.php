@@ -51,6 +51,7 @@ class PostController extends Controller {
             'title'   => $request->post('data')['title'],
             'body'    => json_encode($request->post('data')['data']),
             'user_id' => auth()->user()->id,
+            'main_img' => request('data')['img']
         ]);
         if($post->slug){
             $tagAndPostRelation::add($tagsIds, $post['id']);
