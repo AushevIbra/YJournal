@@ -15,6 +15,7 @@ blockquote {
     border-left-color: #c2c2c2 !important;
 }
 
+
 .nav-color {
     background-color: #4f9ff2;
 }
@@ -25,6 +26,12 @@ blockquote {
 
 .page-footer {
     background-color: #282828;
+}
+
+.brand-logo img {
+    position: relative;
+    height: 30px;
+    top: 6px;
 }
 
 .attach img {
@@ -376,8 +383,9 @@ blockquote {
 
 .no-shadow {
     box-shadow: none !important;
-    border-radius: 15px;
 }
+
+
 
 .myButton {
     background-color: #70ca82;
@@ -534,7 +542,7 @@ blockquote {
     color: #3c3c3c;
 }
 
-#react-post > .d-flex . a {
+#react-post > .d-flex a {
     color: #3c3c3c;
 }
 

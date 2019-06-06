@@ -58,15 +58,18 @@
 
         <ul class="d-flex">
             <li>
-                <a href="/" class="brand-logo">YJournal</a>
+                <a href="/" class="brand-logo">
+                    <img src="{{asset('/imgs/logo.svg')}}" alt="">
+                </a>
             </li>
             <div class="hide-on-med-and-down">
                 @if(\Illuminate\Support\Facades\Auth::guest())
                     <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
+                    <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+
                 @else
 
                     <li class="{{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
-                    <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
                     <li id="notification" class="center-block" style="width: 150px;"></li>
                     <li class="header-avatar">
                         <img src="{{Auth::user()->avatar}}" data-dropdown-profile="123"/>
@@ -84,6 +87,7 @@
         <ul id="nav-mobile" class="sidenav">
             @guest
                 <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
+                <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
             @else
                 <ul class="collapsible black-text">
                     <li>

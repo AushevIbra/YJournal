@@ -27,7 +27,7 @@ const TopComment = () => {
             {topComment !== null
 
                 ?
-                <div className="card-panel light lighten-5 z-depth-1 no-shadow widget">
+                <div className="card-panel light lighten-5 z-depth-1 widget">
                     <div className="row valign-wrapper">
                         <div className="col s12">
                             <div>
