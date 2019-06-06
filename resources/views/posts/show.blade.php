@@ -19,7 +19,7 @@
             <div class="full-post">
                 <div class="post-meta clearfix">
                     <div>
-                        <a href="/user/2" class="post-meta-profile">
+                    <a href="{{route('user.profile', $data->user_id)}}" class="post-meta-profile">
                             <span class="post-meta-avatar" style="background-image: url('{{$data->user->avatar}}')"></span>
                             <span class="post-meta-name">{{$data->user->name}}</span>
                         </a>
