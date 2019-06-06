@@ -100,20 +100,21 @@ class ApiController extends Controller
             ]);
             $post->increment('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == 1) {
+        } 
+        if($rating->type == 1) {
             $rating->update([
                 'type' => -1,
             ]);
             $post->decrement('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == -1) {
-            $rating->update([
-                'type' => 1
-            ]);
+        } 
+        if($rating->type == -1) {
+            $rating->delete();
 
             $post->increment('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == 0) {
+        } 
+        if($rating->type == 0) {
             $rating->update([
                 'type' => 1
             ]);
@@ -136,20 +137,23 @@ class ApiController extends Controller
             ]);
             $post->decrement('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == 0) {
+        } 
+        if($rating->type == 0) {
             $rating->update([
                 'type' => -1,
             ]);
             $post->increment('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == -1) {
+        } 
+        if($rating->type == -1) {
             $rating->update([
                 'type' => 0
             ]);
 
             $post->decrement('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } elseif($rating->type == 1) {
+        } 
+        if($rating->type == 1) {
             $rating->update([
                 'type' => 0
             ]);
