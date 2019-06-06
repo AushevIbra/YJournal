@@ -70,8 +70,8 @@
 
                 @else
 
-                    <li class="{{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
-                    <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+                    <li class="light {{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
+                    <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
                     <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
                     <li id="notification" class="center-block" style="width: 150px;"></li>
                     <li class="header-avatar">
