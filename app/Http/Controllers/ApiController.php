@@ -101,6 +101,14 @@ class ApiController extends Controller
             $post->increment('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
         } 
+
+        if($rating && $rating->type == 1) {
+            $rating->delete();
+            $post->decrement('rating');
+
+            return response()->json(['rating' => $post->rating, 'success' => true], 200);
+        }
+
         // if($rating->type == 1) {
         //     $rating->update([
         //         'type' => -1,
