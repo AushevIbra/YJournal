@@ -24,7 +24,7 @@
                 </div>
 
                 <div class="input-field col s12">
-                    <textarea id="textarea1" placeholder="Опишите тут свой вопрос (чем подробней будет вопрос, тем быстрей Вы получите на него ответ) *" class="materialize-textarea"
+                    <textarea id="textarea1" placeholder="Опишите свою проблему *" class="materialize-textarea"
                               name="body">{{old('body')}}</textarea>
                     <label for="textarea1">Описание</label>
                 </div>
