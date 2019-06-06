@@ -72,7 +72,7 @@
 
                     <li class="{{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
                     <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
-
+                    <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
                     <li id="notification" class="center-block" style="width: 150px;"></li>
                     <li class="header-avatar">
                         <img src="{{Auth::user()->avatar}}" data-dropdown-profile="123"/>
@@ -91,7 +91,8 @@
             @guest
                 <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
                 <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
-            @else
+                <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
+                @else
                 <ul class="collapsible black-text">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">person</i>Профиль</div>
