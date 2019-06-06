@@ -101,66 +101,66 @@ class ApiController extends Controller
             $post->increment('rating');
             return response()->json(['rating' => $post->rating, 'success' => true], 200);
         } 
-        if($rating->type == 1) {
-            $rating->update([
-                'type' => -1,
-            ]);
-            $post->decrement('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } 
-        if($rating->type == -1) {
-            $rating->delete();
+        // if($rating->type == 1) {
+        //     $rating->update([
+        //         'type' => -1,
+        //     ]);
+        //     $post->decrement('rating');
+        //     return response()->json(['rating' => $post->rating, 'success' => true], 200);
+        // } 
+        // if($rating->type == -1) {
+        //     $rating->delete();
 
-            $post->increment('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } 
-        if($rating->type == 0) {
-            $rating->update([
-                'type' => 1
-            ]);
+        //     $post->increment('rating');
+        //     return response()->json(['rating' => $post->rating, 'success' => true], 200);
+        // } 
+        // if($rating->type == 0) {
+        //     $rating->update([
+        //         'type' => 1
+        //     ]);
 
-            $post->increment('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        }
+        //     $post->increment('rating');
+        //     return response()->json(['rating' => $post->rating, 'success' => true], 200);
+        // }
 
 
     }
 
-    public function disslike($id){
-        $rating = Rating::where([ ['post_id', $id], ['user_id', auth()->user()->id]])->first();
-        $post = Post::find($id);
-        if($rating === null){
-            Rating::create([
-                'type' => 0,
-                'user_id' => auth()->user()->id,
-                'post_id' => $id
-            ]);
-            $post->decrement('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } 
-        if($rating->type == 0) {
-            $rating->update([
-                'type' => -1,
-            ]);
-            $post->increment('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } 
-        if($rating->type == -1) {
-            $rating->update([
-                'type' => 0
-            ]);
+    // public function disslike($id){
+    //     $rating = Rating::where([ ['post_id', $id], ['user_id', auth()->user()->id]])->first();
+    //     $post = Post::find($id);
+    //     if($rating === null){
+    //         Rating::create([
+    //             'type' => 0,
+    //             'user_id' => auth()->user()->id,
+    //             'post_id' => $id
+    //         ]);
+    //         $post->decrement('rating');
+    //         return response()->json(['rating' => $post->rating, 'success' => true], 200);
+    //     } 
+    //     if($rating->type == 0) {
+    //         $rating->update([
+    //             'type' => -1,
+    //         ]);
+    //         $post->increment('rating');
+    //         return response()->json(['rating' => $post->rating, 'success' => true], 200);
+    //     } 
+    //     if($rating->type == -1) {
+    //         $rating->update([
+    //             'type' => 0
+    //         ]);
 
-            $post->decrement('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        } 
-        if($rating->type == 1) {
-            $rating->update([
-                'type' => 0
-            ]);
+    //         $post->decrement('rating');
+    //         return response()->json(['rating' => $post->rating, 'success' => true], 200);
+    //     } 
+    //     if($rating->type == 1) {
+    //         $rating->update([
+    //             'type' => 0
+    //         ]);
 
-            $post->decrement('rating');
-            return response()->json(['rating' => $post->rating, 'success' => true], 200);
-        }
-    }
+    //         $post->decrement('rating');
+    //         return response()->json(['rating' => $post->rating, 'success' => true], 200);
+    //     }
+    // }
 
 }
