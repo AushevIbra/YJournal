@@ -130,7 +130,7 @@ BLOCK;
             if(sizeof($attaches) >= 3 ){
                 break;
             }
-            if($item->type == 'image' && $count_img < 2){
+            if($item->type == 'image' && $count_img < 1){
                 $attaches[] = "<img src=\"{$item->data->file->url}\" />";
                 $count_img++;
             }
