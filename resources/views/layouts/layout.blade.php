@@ -184,7 +184,7 @@
     }); // end of document ready
 
 </script>
-<script src="{{ asset('/js/app.js'}}"></script>
+<script src="{{ asset('/js/app.js')}}"></script>
 <script src="{{ asset('/js/ion.js') }}"></script>
 <script src="{{ asset('/assets/js/main.js') }}"></script>
 <script src="{{asset('/js/jquery.sticky.js')}}"></script>
