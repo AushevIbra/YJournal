@@ -56,6 +56,11 @@ tag_and_post_relations.tag_id ORDER BY  cnt DESC LIMIT 10");
         }
     }
 
+    public function about()
+    {
+        return view('about');
+    }
+
     /**
      * Для вывода записей по тегам
      *

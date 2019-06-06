@@ -24,6 +24,50 @@ blockquote {
     color: #4f9ff2 !important;
 }
 
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1020px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}   
+.c640 {
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.full-post {
+    padding-bottom: 65px;
+    margin-top: 25px;
+}
+.full-post h1 {
+    font-weight: 600;
+    font-size: 40px;
+    color: #2a2a2a;
+    margin-top: 30px;
+}
+.full-post__content {
+    word-wrap: break-word;
+}
+
+.full-post p {
+    margin: 0;
+    font-family: Lora;
+    line-height: 29px;
+    font-size: 18px;
+    letter-spacing: .15px;
+    margin-bottom: 20px;
+}
+.full-post h2 {
+    font-size: 27px;
+    margin-top: 30px;
+}
+
 .page-footer {
     background-color: #282828;
 }
@@ -260,6 +304,8 @@ blockquote {
     visibility: visible;
     opacity: 1;
 }
+
+
 
 .popup-login__social--facebook:after {
     content: "\F39E";

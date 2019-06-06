@@ -27,6 +27,7 @@ Route::get('/tag/{title}', 'HomeController@tag');
 //Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/about', 'HomeController@about')->name('about');
 Route::post('/ulogin', 'UloginController@login');
 
 Route::group(['prefix' => 'user'], function()

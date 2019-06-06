@@ -66,6 +66,7 @@
                 @if(\Illuminate\Support\Facades\Auth::guest())
                     <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
                     <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+                    <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
 
                 @else
 
@@ -133,13 +134,7 @@
 
 
 <div id="react-bottom-nav"></div>
-{{--<footer class="page-footer">--}}
-{{--<div>--}}
-{{--<div class="container">--}}
-{{--Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a>--}}
-{{--</div>--}}
-{{--</div>--}}
-{{--</footer>--}}
+@yield('footer')
 
 @if(\Illuminate\Support\Facades\Auth::guest())
     @include('auth.ulogin')

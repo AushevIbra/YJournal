@@ -14,8 +14,8 @@
             font-size: 1.56rem !important;
         }
     </style>
-    <div class="row">
-        <div class="col m9 offset-m1 s12">
+    <div class="wrapper">
+        <div class="c640">
             <div class="full-post">
                 <div class="post-meta clearfix">
                     <div>
