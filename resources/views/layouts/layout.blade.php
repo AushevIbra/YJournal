@@ -96,6 +96,7 @@
                 <ul class="collapsible black-text">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">person</i>Профиль</div>
+                        
                         <div class="collapsible-body">
                             <ul class="collection">
                                 <li class="collection-item"><a href="{{route("user.profile", Auth::user()->id)}}">Мой профиль</a></li>
@@ -105,6 +106,8 @@
                         </div>
                     </li>
                     <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+                    <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
+
 
                 </ul>
             @endguest
