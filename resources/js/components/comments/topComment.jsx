@@ -37,9 +37,11 @@ const TopComment = () => {
 
                             <div className="card-info">
                                 <img src={topComment.user.avatar}
-                                     className="circle" width="30" height="30"/>
+                                     width="30" height="30"/>
                                 <div>
                                     <a href="#">{topComment.user.name}</a>
+                                    <br/>
+                                    <a href={`/post/${topComment.post.slug}#${topComment.id}`} className="black-text">{topComment.length > 25 ? `${topComment.text.substr(0, 25)}...` : topComment.text}</a>
                                     <br/>
                                     <span>{getTime(topComment.created_at)}</span>
                                 </div>

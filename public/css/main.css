@@ -108,7 +108,7 @@ blockquote {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 999;
+    z-index: 9999;
     background: rgba(0, 0, 0, .76);
     -webkit-transition: all .2s ease-out;
     transition: all .2s ease-out;
@@ -119,7 +119,10 @@ blockquote {
     height: 100%;
     border-radius: 50%;
     cursor: pointer;
+    border: 1px solid #000;
 }
+
+
 
 .header-avatar {
     width: 30px;
@@ -536,6 +539,24 @@ blockquote {
 
 .active_city > a {
     color: #74b8ff;
+}
+.s30 {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+.sticky-wrapper {
+    z-index: 9999;
+}
+
+
+
+nav ul a {
+    font-size: 14px !important;
+}
+
+main {
+    margin-top: 15px;
 }
 
 .link_city {

@@ -53,7 +53,7 @@
 @auth
     @include('components.dropdown-user')
 @endauth
-<nav class="nav-color" role="navigation">
+<nav class="nav-color sticky" role="navigation">
     <div class="nav-wrapper ">
 
         <ul class="d-flex">
@@ -70,6 +70,8 @@
                 @else
 
                     <li class="{{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
+                    <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+
                     <li id="notification" class="center-block" style="width: 150px;"></li>
                     <li class="header-avatar">
                         <img src="{{Auth::user()->avatar}}" data-dropdown-profile="123"/>
@@ -182,10 +184,10 @@
     }); // end of document ready
 
 </script>
-<script src="{{ asset('/js/app.js') }}"></script>
+<script src="{{ asset('/js/app.js?v='.time()) }}"></script>
 <script src="{{ asset('/js/ion.js') }}"></script>
 <script src="{{ asset('/assets/js/main.js') }}"></script>
-
+<script src="{{asset('/js/jquery.sticky.js')}}"></script>
 
 @yield('js')
 

@@ -1,5 +1,5 @@
 $(function () {
-
+    $(".sticky").sticky();
     $("[data-id='login']").on('click', function () {
         $(".popup-login").addClass('active');
         $(".popup-login").attr('data-active', 'true');

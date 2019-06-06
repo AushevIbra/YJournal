@@ -7,7 +7,7 @@ const ListLiveComments = ({comments}) => {
                 return (
                     <li className="collection-item avatar"
                         key={`${item.id}-${item.user.avatar}`}>
-                        <img src={item.user.avatar} alt="" className="circle"/>
+                        <img src={item.user.avatar} alt="" className="circle s30"/>
                         <span className="title f-size">{item.user.name}</span>
                         <p className="f-size">
                             <a href={`/post/${item.post.slug}#${item.id}`}>{item.text.length > 15 ? `${item.text.substr(0, 15)}...`: item.text }</a>

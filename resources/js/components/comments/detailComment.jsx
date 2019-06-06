@@ -10,7 +10,7 @@ const DetailComment = ({comment, className, setUser}) => {
                     <div>
                         <img
                             src={comment.user.avatar} alt=""
-                            className="circle m-5px" height="36"/>
+                            className="m-5px" height="36"/>
                     </div>
                     <div>
                         <a href="#" className="site-color-link">
