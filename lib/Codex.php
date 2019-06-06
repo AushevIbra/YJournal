@@ -132,6 +132,7 @@ BLOCK;
             }
             if($item->type == 'image' && $count_img < 2){
                 $attaches[] = "<img src=\"{$item->data->file->url}\" />";
+                $count_img++;
             }
 
             if($item->type == 'quote'){
