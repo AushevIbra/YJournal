@@ -125,11 +125,12 @@ BLOCK;
 
     public static function generateDesc($data){
         $attaches = [];
+        $count_img = 0;
         foreach($data->blocks as $item){
             if(sizeof($attaches) >= 3 ){
                 break;
             }
-            if($item->type == 'image'){
+            if($item->type == 'image' && $count_img < 2){
                 $attaches[] = "<img src=\"{$item->data->file->url}\" />";
             }
 
