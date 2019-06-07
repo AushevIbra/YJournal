@@ -49,6 +49,6 @@
 @endsection
 
 @section('js')
-    <script src="{{asset('js/comments.js')}}"></script>
+    <script src="{{asset('js/comments.js?v='.time())}}"></script>
     <script src="{{asset("js/zoom.js")}}"></script>
 @endsection

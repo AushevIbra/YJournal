@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Models\Notification;
 use App\Models\Rating;
 use App\Notifications\AddLike;
+use Illuminate\Support\Facades\Log;
 
 class RatingObserver {
     /**
@@ -14,9 +15,10 @@ class RatingObserver {
      * @return void
      */
     public function created(Rating $rating){
-        $post = $rating->post;
-        if(auth()->user()->id !== $post->user_id){
-            $post->user->notify(new AddLike($rating));
+        //        $post = $rating->post;
+        $user = Rating::withModel($rating);
+        if(auth()->user()->id != $user->user_id){
+            $user->user->notify(new AddLike($rating));
 
         }
     }
@@ -28,9 +30,10 @@ class RatingObserver {
      * @return void
      */
     public function updated(Rating $rating){
-        $user = $rating->post->user;
+        $user = Rating::withModel($rating);
         Notification::where("notifiable_id", $user->id)->delete();
-        if($rating->type >= 0)
+        
+        if($rating->type >= 0 && auth()->user()->id != $user->user_id)
             $user->notify(new AddLike($rating));
 
     }

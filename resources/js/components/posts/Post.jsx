@@ -117,7 +117,7 @@ class Post extends Component {
     setRating(parameters) {
         const {id, type, key} = parameters;
         const newState = [...this.state.posts];
-        axios.post(`/api/${type}/` + id, {model: "App\Models\Post"})
+        axios.post(`/api/${type}/` + id, {model: 'App\\Models\\Post'})
             .then(response => {
                 newState[key].rating = response.data.rating;
                 this.setState({

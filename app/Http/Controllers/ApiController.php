@@ -62,7 +62,7 @@ class ApiController extends Controller {
 
     public function topComment(Comment $comment){
 
-        $comment = $comment::with(['user', 'post'])->whereDate('created_at', date("Y-m-d"))->orderBy('likes_count', 'desc')->first();
+        $comment = $comment::with(['user', 'post'])->whereDate('created_at', date("Y-m-d"))->orderBy('rating', 'desc')->first();
 
         return $comment !== null? response(['data' => $comment]): response(['error' => 'Нет комментария']);
     }
@@ -91,7 +91,7 @@ class ApiController extends Controller {
 
     public function like($id){
         $rating = Rating::where([['model_id', $id], ['user_id', auth()->user()->id], ['model', \request('model')]])->first();
-        $post = Post::find($id);
+        $post = call_user_func_array([\request("model"), "find"], [$id]);
         if($rating === null){
             Rating::create([
                 'type'     => 1,
@@ -129,8 +129,8 @@ class ApiController extends Controller {
     }
 
     public function disslike($id){
-        $rating = Rating::where([['model_id', $id], ['user_id', auth()->user()->id], 'model' => \request('model')])->first();
-        $post = Post::find($id);
+        $rating = Rating::where([['model_id', $id], ['user_id', auth()->user()->id], ['model', \request('model')]])->first();
+        $post = call_user_func_array([\request("model"), "find"], [$id]);
         if($rating === null){
             Rating::create([
                 'type'     => 0,

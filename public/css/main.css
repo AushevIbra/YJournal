@@ -23,7 +23,14 @@ blockquote {
 .site-color-link {
     color: #4f9ff2 !important;
 }
-
+.w-100 {
+    width: 100% !important;
+}
+.comment-rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
