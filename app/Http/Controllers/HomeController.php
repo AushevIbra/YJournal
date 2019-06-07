@@ -43,10 +43,10 @@ tag_and_post_relations.tag_id ORDER BY  cnt DESC LIMIT 10");
     }
 
     public function clear(){
-        Artisan::call("cache:clear");
-        Artisan::call("route:cache");
-        Artisan::call("view:clear");
-        Artisan::call("config:cache");
+        Artisan::call("migrate");
+//        Artisan::call("route:cache");
+//        Artisan::call("view:clear");
+//        Artisan::call("config:cache");
     }
 
     public function test(){
