@@ -64,8 +64,8 @@ Route::group(['prefix' => 'api'], function (){
     });
 
     Route::get('/current-user', 'ApiController@currentUser')->middleware('auth');
-    Route::get('/like/{id}', 'ApiController@like')->middleware('auth');
-    Route::get('/disslike/{id}', 'ApiController@disslike')->middleware('auth');
+    Route::post('/like/{id}', 'ApiController@like')->middleware('auth');
+    Route::post('/disslike/{id}', 'ApiController@disslike')->middleware('auth');
 });
 Route::post('answers', 'AnswerController@addComment'); // Получает комменты по id поста
 Route::get('logout', 'HomeController@logout')->middleware('auth')->name('logout');
