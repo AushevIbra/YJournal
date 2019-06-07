@@ -62,7 +62,7 @@ class ApiController extends Controller {
 
     public function topComment(Comment $comment){
 
-        $comment = $comment::with(['user', 'post'])->whereDate('created_at', date("Y-m-d"))->orderBy('rating', 'desc')->first();
+        $comment = $comment::with(['user', 'post'])->where("rating", ">", 0)->whereDate('created_at', date("Y-m-d"))->orderBy('rating', 'desc')->first();
 
         return $comment !== null? response(['data' => $comment]): response(['error' => 'Нет комментария']);
     }
