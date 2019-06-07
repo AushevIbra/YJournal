@@ -32,7 +32,7 @@ class RatingObserver {
     public function updated(Rating $rating){
         $user = Rating::withModel($rating);
         Notification::where("notifiable_id", $user->id)->delete();
-        
+
         if($rating->type >= 0 && auth()->user()->id != $user->user_id)
             $user->notify(new AddLike($rating));
 

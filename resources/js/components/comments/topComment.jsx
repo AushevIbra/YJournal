@@ -45,7 +45,7 @@ const TopComment = () => {
                                     <br/>
                                     <span>{getTime(topComment.created_at)}</span>
                                 </div>
-                                <div className="circle center widget__count"><span>{topComment.likes_count}</span></div>
+                                <div className="circle center widget__count"><span>{topComment.rating}</span></div>
                             </div>
 
 
