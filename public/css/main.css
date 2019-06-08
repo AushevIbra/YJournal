@@ -140,9 +140,18 @@ blockquote {
     font-family: Font Awesome\ 5 Free;
 }
 
+.notif-like:before {
+    background: #3cc974 !important;
+}
+
+.notif-disslike:before {
+    background: red !important;
+}
+
 .notif-disslike:after {
     content: "\F165";
     font-family: Font Awesome\ 5 Free;
+    top: 4px !important;
 }
 
 .notification-mobile:after {
@@ -719,6 +728,12 @@ main {
     position: relative;
     z-index: 9999;
     padding: 0px;
+    right: 153px;
+}
+
+.notification a:hover {
+    background: none !important;
+    text-decoration: underline;
 }
 
 .card-title {

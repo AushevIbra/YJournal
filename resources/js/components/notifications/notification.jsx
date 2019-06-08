@@ -65,7 +65,6 @@ const Notification = () => {
                     </div>
                     <div>
                         {notifications.map(item => {
-                            console.log(item)
                             return (
                                 <ListNotifications item={item} key={item.id}/>
                             )

@@ -8,7 +8,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class AddLike extends Notification
+class CommentRating extends Notification
 {
     use Queueable;
     /**
@@ -44,13 +44,13 @@ class AddLike extends Notification
      * @param  mixed  $notifiable
      * @return \Illuminate\Notifications\Messages\MailMessage
      */
-//    public function toMail($notifiable)
-//    {
-//        return (new MailMessage)
-//                    ->line('The introduction to the notification.')
-//                    ->action('Notification Action', url('/'))
-//                    ->line('Thank you for using our application!');
-//    }
+    //    public function toMail($notifiable)
+    //    {
+    //        return (new MailMessage)
+    //                    ->line('The introduction to the notification.')
+    //                    ->action('Notification Action', url('/'))
+    //                    ->line('Thank you for using our application!');
+    //    }
 
     /**
      * Get the array representation of the notification.
@@ -61,11 +61,12 @@ class AddLike extends Notification
     public function toArray($notifiable)
     {
         $user = $this->rating->user;
+        $comment = Rating::withModel($this->rating);
         return [
-            'message' => 'Пользователь ' . $user->name . ' оценил Ваш пост',
+            'message' => 'Пользователь ' . $user->name . ' оценил Ваш комментарий',
             'user' => $user,
-            'post' => $this->rating->post,
-            'href' => "/post/{$this->rating->post->slug}",
+            'comment' => $comment,
+            'href' => "/post/{$comment->post->slug}#$comment->id",
             'type' => ($this->rating->type == 1) ? "like" : "disslike",
         ];
     }

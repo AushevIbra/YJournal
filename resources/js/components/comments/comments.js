@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import ReactDOM from "react-dom";
 import ListComment from "./listComment";
 import {Provider} from "react-redux";
-import {applyMiddleware, createStore} from 'redux';
-import logger from 'redux-logger';
+import {createStore} from 'redux';
+// import logger from 'redux-logger';
 import rootReducer from '../../store/reducers/rootReducer'
 import AddComment from "./addComment";
 
-const store = createStore(rootReducer, applyMiddleware(logger));
+const store = createStore(rootReducer);
 
 const Comments = (props) => {
 
