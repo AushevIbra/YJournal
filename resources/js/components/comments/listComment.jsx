@@ -22,7 +22,7 @@ const ListComment = ({comments, setUserForReplyComment, moreComment, nextPage}) 
         <div>
             {comments !== null && comments.map((item, key) => {
                 return (
-                    <div key={item.id}>
+                    <div key={item.id} className="row">
 
                         <DetailComment setLike={setRating.bind(this, {type: 'like', id: item.id})}
                                        setDisslike={setRating.bind(this, {type: 'disslike', id: item.id})}

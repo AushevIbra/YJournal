@@ -12,7 +12,7 @@ const ListComment = ({comments, setUserForReplyComment, moreComment, nextPage}) 
         <div>
             {comments !== null && comments.map(item => {
                 return (
-                    <div key={item.id}>
+                    <div key={item.id} className="row">
 
                             <DetailComment className="col s12" comment={item} setUser={setUser}/>
                         {item.children_comments.map(comment => {
