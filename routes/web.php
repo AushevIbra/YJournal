@@ -47,6 +47,11 @@ Route::resource('asks', 'AskController')->only([
     'index', 'update', 'destroy', 'store', 'create', 'show'
 ]);
 
+Route::group(['prefix' => 'board'], function (){
+    Route::get('/', 'Ads\AdController@ads')->name('board');
+    Route::resource('ads', 'Ads\AdController');
+});
+
 
 Route::group(['prefix' => 'api'], function (){
     Route::group(['prefix' => 'comments'], function () {

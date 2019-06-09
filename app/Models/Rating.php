@@ -28,11 +28,16 @@ class Rating extends Model {
      */
     public static function withModel(Rating $rating){
         if($rating->model === "App\Models\Comment"){
-            return Rating::with("comment")->find($rating->id)->comment;
+            $model = Rating::with("comment")->find($rating->id)->comment;
+            Notification::where([['notifiable_type', "App\Models\Comment"], ["notifiable_id", $model->id]])->delete();
+            return $model;
         }
 
         if($rating->model === "App\Models\Post"){
-            return Rating::with("post")->find($rating->id)->post;
+            $model = Rating::with("post")->find($rating->id)->post;
+            Notification::where([['notifiable_type', "App\Models\Post"], ["notifiable_id", $model->id]])->delete();
+            return $model;
+
         }
     }
 }

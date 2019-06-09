@@ -23,14 +23,17 @@ blockquote {
 .site-color-link {
     color: #4f9ff2 !important;
 }
+
 .w-100 {
     width: 100% !important;
 }
+
 .comment-rating {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -40,7 +43,8 @@ blockquote {
     margin: 0 auto;
     padding: 0 20px;
     position: relative;
-}   
+}
+
 .c640 {
     max-width: 640px;
     width: 100%;
@@ -52,12 +56,14 @@ blockquote {
     padding-bottom: 65px;
     margin-top: 25px;
 }
+
 .full-post h1 {
     font-weight: 600;
     font-size: 40px;
     color: #2a2a2a;
     margin-top: 30px;
 }
+
 .full-post__content {
     word-wrap: break-word;
 }
@@ -70,6 +76,7 @@ blockquote {
     letter-spacing: .15px;
     margin-bottom: 20px;
 }
+
 .full-post h2 {
     font-size: 27px;
     margin-top: 30px;
@@ -181,7 +188,6 @@ blockquote {
     cursor: pointer;
     border: 1px solid #000;
 }
-
 
 
 .header-avatar {
@@ -322,7 +328,6 @@ blockquote {
 }
 
 
-
 .popup-login__social--facebook:after {
     content: "\F39E";
     font-size: 18px;
@@ -449,7 +454,6 @@ blockquote {
 .no-shadow {
     box-shadow: none !important;
 }
-
 
 
 .myButton {
@@ -602,6 +606,7 @@ blockquote {
 .active_city > a {
     color: #74b8ff;
 }
+
 .s30 {
     width: 30px !important;
     height: 30px !important;
@@ -610,7 +615,6 @@ blockquote {
 .sticky-wrapper {
     z-index: 9999;
 }
-
 
 
 nav ul a {
@@ -904,7 +908,7 @@ main {
     margin-right: 5px !important;
 }
 
-.black-text {
+.black-text, .optgroup-option > span,.dropzone .dz-default.dz-message span{
     color: #2a2a2a !important;
 }
 

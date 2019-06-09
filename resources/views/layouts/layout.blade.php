@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="{{asset('css/brands.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/fontawesome.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/solid.min.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/dropzone.css')}}">
 
     <!-- Meta Zone -->
     <meta name="robots" content="index, follow, all">
@@ -27,7 +28,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="@yield('title')">
-    <meta name="theme-color" content="#2a2a2a" />
+    <meta name="theme-color" content="#2a2a2a"/>
 
     <meta property="og:site_name" content="@yield('title')">
     <meta property="og:type" content="website">
@@ -44,7 +45,6 @@
     <meta name="twitter:image" content="@yield('main_img')"> <!-- Twitter -->
     <meta name="twitter:title" content="@yield('title')">
     <meta name="twitter:description" content="@yield('description')">
-
 
 
     @yield('css')
@@ -66,11 +66,13 @@
                 @if(\Illuminate\Support\Facades\Auth::guest())
                     <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
                     <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
+                    <li class="light {{ request()->is('board*') || request()->is('ads*') ? 'active' : '' }}"><a href="{{route('board')}}">Объявления</a></li>
                     <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
 
                 @else
 
                     <li class="light {{ request()->is('post/create') ? 'active' : '' }}"><a href="{{route('post.create')}}">Написать</a></li>
+                    <li class="light {{ request()->is('board*') || request()->is('ads*') ? 'active' : '' }}"><a href="{{route('board')}}">Объявления</a></li>
                     <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
                     <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
                     <li id="notification" class="center-block" style="width: 150px;"></li>
@@ -90,13 +92,14 @@
         <ul id="nav-mobile" class="sidenav">
             @guest
                 <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
+                <li class="light {{ request()->is('board*') || request()->is('ads*') ? 'active' : '' }}"><a href="{{route('board')}}">Объявления</a></li>
                 <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
                 <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
-                @else
+            @else
                 <ul class="collapsible black-text">
                     <li>
                         <div class="collapsible-header"><i class="material-icons">person</i>Профиль</div>
-                        
+
                         <div class="collapsible-body">
                             <ul class="collection">
                                 <li class="collection-item"><a href="{{route("user.profile", Auth::user()->id)}}">Мой профиль</a></li>
@@ -105,6 +108,7 @@
                             </ul>
                         </div>
                     </li>
+                    <li class="light {{ request()->is('board*') || request()->is('ads*') ? 'active' : '' }}"><a href="{{route('board')}}">Объявления</a></li>
                     <li class="{{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
                     <li class="light {{ request()->is('about') ? 'active' : '' }}"><a href="{{route('about')}}">О проекте</a></li>
 
@@ -148,7 +152,7 @@
 <!--  Scripts-->
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="{{ asset('assets/js/materialize.js') }}"></script>
-
+<script src="{{asset('js/dropzone.js')}}"></script>
 
 <script>
 
@@ -174,6 +178,11 @@
         $('.modal').modal();
         $(".dropdown-trigger").dropdown();
         $('.collapsible').collapsible();
+        $('.fixed-action-btn').floatingActionButton({
+            // direction: 'left',
+            hoverEnabled: false
+        });
+
         // $(".owl-carousel").owlCarousel();
         // $('.fixed-action-btn').floatingActionButton({
         //     direction: 'left',

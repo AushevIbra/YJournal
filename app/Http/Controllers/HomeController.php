@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ads\Category;
 use App\User;
 use Illuminate\Http\Request;
 use App\Models\Post;
@@ -30,10 +31,9 @@ class HomeController extends Controller {
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index(){
-        $tags = DB::select("SELECT COUNT(tag_and_post_relations.id) as cnt, tags.title, tags.id FROM `tag_and_post_relations` JOIN tags ON tag_and_post_relations.tag_id = tags.id GROUP BY 
-tag_and_post_relations.tag_id ORDER BY  cnt DESC LIMIT 10");
-
-        return view('index', compact('tags'));
+//        $tags = DB::select("SELECT COUNT(tag_and_post_relations.id) as cnt, tags.title, tags.id FROM `tag_and_post_relations` JOIN tags ON tag_and_post_relations.tag_id = tags.id GROUP BY
+//tag_and_post_relations.tag_id ORDER BY  cnt DESC LIMIT 10");
+        return view('index');
     }
 
     public function logout(Request $request){
