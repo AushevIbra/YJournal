@@ -44,6 +44,7 @@ class HomeController extends Controller {
 
     public function clear(){
         Artisan::call("migrate");
+        Artisan::call("db:seed");
 //        Artisan::call("route:cache");
 //        Artisan::call("view:clear");
 //        Artisan::call("config:cache");
