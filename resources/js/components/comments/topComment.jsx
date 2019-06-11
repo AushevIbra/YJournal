@@ -37,7 +37,7 @@ const TopComment = () => {
 
                             <div className="card-info">
                                 <img src={topComment.user.avatar}
-                                     width="30" height="30"/>
+                                     width="30" height="30" className="circle"/>
                                 <div>
                                     <a href="#">{topComment.user.name}</a>
                                     <br/>
