@@ -32,8 +32,8 @@ const ListComment = ({comments, setUserForReplyComment, moreComment, nextPage}) 
                         />
                         {item.children_comments.map((comment, key) => {
                             return (
-                                <DetailComment setLike={setRating.bind(this, {type: 'like', id: item.id})}
-                                               setDisslike={setRating.bind(this, {type: 'disslike', id: item.id})}
+                                <DetailComment setLike={setRating.bind(this, {type: 'like', id: comment.id})}
+                                               setDisslike={setRating.bind(this, {type: 'disslike', id: comment.id})}
                                                className="col s11 offset-s1"
                                                comment={comment}
                                                key={comment.id}
