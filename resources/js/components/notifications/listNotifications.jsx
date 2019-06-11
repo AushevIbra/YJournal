@@ -1,22 +1,10 @@
 import React from 'react'
 
-const checkType = type => {
-    switch (type) {
-        case 'like':
-            return "notif-like";
-        case 'disslike':
-            return "notif-disslike";
-        default:
-            return "";
-    }
-}
-
-
 const ListNotifications = ({item, isMobile}) => {
     const mobileClass = isMobile ? "notification-mobile" : null;
     return (
         <div className="d-flex black-text flex-beetween border-bottom align-items">
-            <div className={`notifications__item-avatar ${mobileClass} ${checkType(item.data.type)}`}>
+            <div className={`notifications__item-avatar ${mobileClass} ${item.data.cssClass}`}>
                 <img src={item.data.user.avatar} alt="Аватарка" title="Аватарка" className="notif-avatar"/>
             </div>
             <span className="line-height2" style={{margin: 5}}>

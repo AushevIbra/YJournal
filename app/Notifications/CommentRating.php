@@ -67,7 +67,9 @@ class CommentRating extends Notification
             'user' => $user,
             'comment' => $comment,
             'href' => "/post/{$comment->post->slug}#$comment->id",
-            'type' => ($this->rating->type == 1) ? "like" : "disslike",
+            'cssClass'    => ($this->rating->type == 1)? "notif-like": "notif-disslike",
+            'comment_id' => $comment->id,
+            'user_id' => $user->id,
         ];
     }
 }

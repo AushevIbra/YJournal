@@ -1,0 +1,122 @@
+.list-item {
+    border-bottom: 1px solid #dfdfe5;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.clearfix:after {
+    display: block;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: '';
+}
+
+.ad-image-link {
+    position: relative;
+    z-index: 3;
+    display: block;
+}
+
+.list-text {
+    margin-left: 180px;
+}
+
+.btn-sec, .list-item-title, .list-text, .meta, .meta > a {
+    position: relative;
+}
+
+.list-item-title {
+    overflow: hidden;
+}
+
+.list-item-title a {
+    float: left;
+    font-weight: 700;
+    margin: 0 150px 0 0;
+    font-size: 1.125rem;
+}
+
+.list-item-price {
+    float: right;
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.list-item img {
+    float: left;
+    width: 160px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+}
+
+.ad-header {
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eaeaea;
+    padding-bottom: 15px;
+
+}
+
+.list-text p {
+    margin: 10px 0 15px;
+    word-break: break-word;
+}
+
+.meta {
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 180px;
+}
+
+.meta .meta-fav {
+    background: url(../svg/sprite.svg) 0 -132px no-repeat;
+    width: 17px;
+    height: 17px;
+    margin-top: 1px;
+    background-size: 200px 620px;
+    padding: 2px 0;
+}
+
+.meta-city:before {
+    content: '';
+    background: url(../svg/sprite.svg) no-repeat;
+    width: 10px;
+    height: 15px;
+    background-size: 200px 620px;
+    position: absolute;
+    left: 0;
+}
+
+.meta > a {
+    color: #9fa5b8;
+    margin-right: 20px;
+    float: left;
+}
+
+.meta .meta-cat {
+    padding: 2px 10px;
+    border: 1px solid #d0d2da;
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -khtml-border-radius: 20px;
+}
+
+.meta .meta-city {
+    padding: 2px 10px 2px 15px;
+}
+
+.meta span {
+    float: right;
+    color: #9fa5b8;
+}
+
+.desrap {
+}

@@ -147,6 +147,16 @@ blockquote {
     font-family: Font Awesome\ 5 Free;
 }
 
+.notif-comment:after {
+    content: "\F075";
+    font-family: Font Awesome\ 5 Free;
+}
+.notif-reply-comment:after {
+    content: "\F086";
+    font-family: Font Awesome\ 5 Free;
+}
+
+
 .notif-like:before {
     background: #3cc974 !important;
 }
@@ -908,7 +918,7 @@ main {
     margin-right: 5px !important;
 }
 
-.black-text, .optgroup-option > span,.dropzone .dz-default.dz-message span{
+.black-text, .optgroup-option > span, .dropzone .dz-default.dz-message span {
     color: #2a2a2a !important;
 }
 

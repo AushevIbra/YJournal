@@ -33,6 +33,7 @@ class HomeController extends Controller {
     public function index(){
 //        $tags = DB::select("SELECT COUNT(tag_and_post_relations.id) as cnt, tags.title, tags.id FROM `tag_and_post_relations` JOIN tags ON tag_and_post_relations.tag_id = tags.id GROUP BY
 //tag_and_post_relations.tag_id ORDER BY  cnt DESC LIMIT 10");
+
         return view('index');
     }
 

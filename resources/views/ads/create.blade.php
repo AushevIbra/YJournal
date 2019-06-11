@@ -3,7 +3,7 @@
 @section('ad')
     <div class="card">
         <div class="card-body">
-            <form class="col s12" method="POST" action="{{route('asks.store')}}">
+            <form class="col s12 addForm" method="POST" action="{{route('ads.store')}}">
                 @csrf
                 <div class="card" style="padding: 15px;">
                     @if ($errors->any())
@@ -17,7 +17,7 @@
                     @endif
                     <div class="row">
                         <div class="input-field col s12 m6">
-                            <input placeholder="Укажите номер телефона" value="{{old('phone')}}" name="phone" type="text">
+                            <input placeholder="Укажите номер телефона" value="{{old('number')}}" name="number" type="text">
                             <label for="phone">Телефон <span class="red-text">*</span></label>
                         </div>
 
@@ -27,7 +27,7 @@
                         </div>
 
                         <div class="input-field col s12">
-                            <select class="black-text">
+                            <select class="black-text" name="category_id">
                                 @foreach($categories as $cat)
                                     @if(count($cat->children) > 0)
                                         <optgroup label="{{$cat->name}}">
@@ -52,8 +52,14 @@
 
                         <div class="input-field col s12">
                              <textarea id="textarea1" placeholder="Текст объявления" class="materialize-textarea"
-                                       name="body">{{old('body')}}</textarea>
+                                       name="content">{{old('content')}}</textarea>
                             <label for="textarea1">Описание <span class="red-text">*</span></label>
+                        </div>
+
+                        <div class="input-field col s12">
+                            <input type="text" name="address" placeholder="Укажите адрес" value="{{old('address')}}">
+                            <label for="price">Адрес <span class="red-text">*</span></label>
+
                         </div>
 
                         <div class="input-field col s6">
@@ -88,7 +94,19 @@
         document.addEventListener('DOMContentLoaded', function () {
             $(document).ready(function () {
                 $('select').formSelect();
-                $(".dropzone").dropzone({url: "/api/upload-image", paramName: 'image', maxFiles: 5});
+                $(".dropzone").dropzone({
+                    url: "/api/upload-image",
+                    paramName: 'image',
+                    maxFiles: 5,
+                    success: (data, response) => {
+                        console.log(response)
+                        const elem = document.createElement('input');
+                        elem.setAttribute('name', 'imgs[]');
+                        elem.setAttribute('value', response.file.url);
+                        elem.setAttribute('type', 'hidden');
+                        $(".addForm").append(elem);
+                    }
+                });
             });
         })
     </script>

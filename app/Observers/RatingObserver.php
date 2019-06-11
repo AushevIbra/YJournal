@@ -24,7 +24,7 @@ class RatingObserver {
                 $user->user->notify(new AddLike($rating));
             }
             if($rating->model == "App\Models\Comment"){
-                $user->user->notify(new CommentRating($rating));
+                $user->user->notify(new CommentRating($rating, "App\Models\Comment"));
             }
 
         }
@@ -38,12 +38,18 @@ class RatingObserver {
      */
     public function updated(Rating $rating){
         $model = Rating::withModel($rating);
+//        Notification::where([
+//            ['model', $rating->model],
+//            ["notifiable_id", $model->user_id],
+//            ['from_id', auth()->user()->id]])
+//            ->delete();
+
         if($rating->type >= 0 && auth()->user()->id != $model->user_id){
             if($rating->model == "App\Models\Post"){
-                $model->user->notify(new AddLike($rating));
+                $model->user->notify(new AddLike($rating, "App\Models\Post"));
             }
             if($rating->model == "App\Models\Comment"){
-                $model->user->notify(new CommentRating($rating));
+                $model->user->notify(new CommentRating($rating, "App\Models\Comment"));
             }
         }
 
