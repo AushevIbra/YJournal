@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dab0c073-a7d3-447e-906f-af4901f4b382" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/layout.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="dab0c073-a7d3-447e-906f-af4901f4b382" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -719,7 +716,7 @@
       <workItem from="1560260721551" duration="6374000" />
       <workItem from="1560280140770" duration="7132000" />
       <workItem from="1560336093546" duration="10432000" />
-      <workItem from="1560363783025" duration="6191000" />
+      <workItem from="1560363783025" duration="6796000" />
     </task>
     <servers />
   </component>
@@ -756,7 +753,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="511486000" />
+    <option name="totallyTimeSpent" value="512091000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
