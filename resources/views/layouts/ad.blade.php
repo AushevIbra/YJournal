@@ -3,7 +3,6 @@
 @section('title', 'YJournal - объявления в Ялте')
 @section('css')
     <link rel="stylesheet" href="{{asset('css/ad.css')}}">
-    <link rel="stylesheet" href="{{asset("css/zoom.css")}}">
 @endsection
 @section('content')
 

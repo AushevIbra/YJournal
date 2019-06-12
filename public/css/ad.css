@@ -134,13 +134,16 @@
 .breadcrumbs ul {
     margin: 0;
 }
+
 .breadcrumbs li {
     display: inline;
 }
+
 .breadcrumbs li a {
     color: #5d99e0;
     font-size: .75rem;
 }
+
 .breadcrumbs li:after {
     content: '/';
     display: inline;
@@ -222,6 +225,7 @@ h1 {
 .item .item-specific h4 {
     margin-bottom: 15px;
 }
+
 h4 {
     font-size: 1.125rem;
 }
@@ -234,6 +238,7 @@ h4 {
 .item .item-specific h4 {
     margin-bottom: 15px;
 }
+
 .item dl {
     margin: 0;
 }
@@ -255,6 +260,7 @@ h4 {
     margin: 8px 0 16px;
     color: #9fa5ba;
 }
+
 .item .item-specific p {
     margin-top: 0;
 }
@@ -271,9 +277,11 @@ h4 {
 .item .item-comments .comments-title {
     margin-top: 30px;
 }
+
 .item .item-comments h4 {
     margin: 40px 0 25px;
 }
+
 .item-desc, .item-related {
     width: 44%;
     float: right;
@@ -283,6 +291,56 @@ h4 {
 .item .item-phone a {
     color: #76a7e1;
     border-bottom: 1px dashed #76a7e1;
+}
+
+.item .item-related ul li img {
+    width: 100px;
+    padding-right: 15px;
+    display: block;
+    float: left;
+}
+
+.item .item-related .related-wraper {
+    margin-left: 115px;
+}
+
+.item .item-related .related-price, .item .item-related .related-title {
+    font-weight: 700;
+}
+
+.item .item-related .related-desc {
+    font-size: .813rem;
+    margin: 10px 0 15px;
+}
+
+.item .item-related .related-price, .item .item-related .related-title {
+    font-weight: 700;
+}
+
+.full-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, .76);
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.full-img > img {
+    /*width: 80%;*/
+    height: 50%;
+}
+.full-img.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 770px) {
@@ -326,7 +384,7 @@ h4 {
     .item .y-slider, .item-comments, .item-desc, .item-related {
         width: 100%;
     }
-    
+
 
 }
 

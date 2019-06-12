@@ -3,6 +3,7 @@
 namespace App\Models\Ads;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Ad extends Model {
     protected $guarded = [];
@@ -32,5 +33,14 @@ class Ad extends Model {
         }
 
         return asset('imgs/placeholder-small.jpg');
+    }
+
+    public static function ads($categoryID = null) {
+        return DB::table('categories')
+            ->select('ads.*', 'categories.name')
+            ->rightJoin('ads', 'categories.id', '=', 'ads.category_id')
+            ->when($categoryID, function($query, $categoryID){
+                return $query->where('categories.parent_id', $categoryID);
+            });
     }
 }

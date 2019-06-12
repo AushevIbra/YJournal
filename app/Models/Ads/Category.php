@@ -26,4 +26,8 @@ class Category extends Model {
     public function parent() {
         return $this->hasOne(Category::class, 'id', 'parent_id');
     }
+
+    public function ads() {
+        return $this->hasMany(Ad::class);
+    }
 }

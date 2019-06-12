@@ -7,6 +7,7 @@ use App\Models\Ads\Ad;
 use App\Models\Ads\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class AdController extends Controller {
 
@@ -65,8 +66,12 @@ class AdController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function show($id){
-        $ad = Ad::findOrFail($id);
-        return view('ads.show', compact('ad'));
+        $ad = Ad::with('category')->findOrFail($id);
+        $ad->increment('views');
+        $parentCategory = $ad->category->parent;
+
+        $related = Ad::ads($parentCategory->id)->limit(5)->get();
+        return view('ads.show', compact('ad', 'parentCategory', 'related'));
     }
 
     /**
