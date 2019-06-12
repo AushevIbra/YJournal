@@ -416,3 +416,103 @@ h4 {
     }
 
 }
+
+.filter {
+    width: 100%;
+}
+
+.search-input {
+    width: 100%;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.search-input #search {
+    width: 100%;
+    height: 50px;
+    background: #f7f7fa;
+    outline: 0;
+    box-sizing: border-box;
+    padding: 0 15px;
+    border: 1px solid #d7d8e0;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -khtml-border-radius: 5px;
+}
+
+.search-input #search, .width-120 {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.search-input #submit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 50px;
+    padding: 0 44px 0 20px;
+    background: #d7d8e0;
+    border-radius: 0 5px 5px 0;
+}
+.button {
+    color: #fff;
+    font-size: .75rem;
+    letter-spacing: .1em;
+    font-weight: 700;
+    transition: all .2s;
+    border: none;
+}
+
+.button.btn-sec:after, .search-input #submit:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(../svg/sprite.svg) 0 -24px no-repeat;
+    width: 16px;
+    height: 17px;
+    background-size: 200px 620px;
+    right: 20px;
+    top: 50%;
+    margin-top: -9px;
+}
+#expand_filters {
+    position: absolute;
+    right: 128px;
+    top: 15px;
+    cursor: pointer;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.item-filter {
+    display: none;
+}
+
+.search-attr .select, .search-attr .select-price {
+    float: left;
+    margin: 14px 20px 0 0;
+    min-width: 210px;
+}
+
+.search-attr .check {
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    margin-right: 0;
+}
+
+.search-attr .check label:first-child {
+    margin-right: 20px;
+}
+.filters_category_select-styler{
+display: inline-block;
+position: relative;
+z-index: 100;
+}
+
+.jq-selectbox {
+    cursor: pointer;
+}

@@ -21,7 +21,6 @@ class CategoryWidget extends AbstractWidget
     public function run()
     {
         $categories = Category::where("parent_id", 0)->with('children')->get();
-
         return view('widgets.category_widget', [
             'config' => $this->config,
             'categories' => $categories

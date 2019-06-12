@@ -9,7 +9,8 @@ class Ad extends Model {
     protected $guarded = [];
 
     public static function filter(){
-        return Ad::with('category')->orderByDesc('id')->paginate();
+        $filter = request()->all('catId', 'childId');
+        return Ad::ads($filter['catId'], $filter['childId'])->orderByDesc('ads.id')->paginate(10);
     }
 
     public function category(){
@@ -35,12 +36,15 @@ class Ad extends Model {
         return asset('imgs/placeholder-small.jpg');
     }
 
-    public static function ads($categoryID = null) {
+    public static function ads($categoryID = null, $childId = null) {
         return DB::table('categories')
-            ->select('ads.*', 'categories.name')
+            ->select('ads.*', 'categories.name as cat_name')
             ->rightJoin('ads', 'categories.id', '=', 'ads.category_id')
             ->when($categoryID, function($query, $categoryID){
                 return $query->where('categories.parent_id', $categoryID);
+            })
+            ->when($childId, function($query, $childId) {
+                return $query->where('categories.id', $childId);
             });
     }
 }

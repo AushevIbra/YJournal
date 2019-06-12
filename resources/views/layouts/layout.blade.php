@@ -90,7 +90,8 @@
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-            @guest
+            <li class="light {{ request()->is('/') ? 'active' : '' }}"><a href="{{route('index')}}">Главная</a></li>
+        @guest
                 <li><a class="light" data-id="login" href="javascript:;">Войти</a></li>
                 <li class="light {{ request()->is('board*') || request()->is('ads*') ? 'active' : '' }}"><a href="{{route('board')}}">Объявления</a></li>
                 <li class="light {{ request()->is('asks*') ? 'active' : '' }}"><a href="{{route('asks.index')}}">Вопросы / Ответы</a></li>
