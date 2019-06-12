@@ -125,6 +125,9 @@ blockquote {
     right: -6px;
     background: #4794e6;
 }
+.brand-logo:hover {
+    background: unset;
+}
 
 .notification-mobile:before {
     bottom: 6px;

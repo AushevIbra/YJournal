@@ -59,7 +59,8 @@
         <ul class="d-flex">
             <li>
                 <a href="/" class="brand-logo">
-                    <img src="{{asset('/imgs/logo.svg')}}" alt="">
+                    {{--<img src="{{asset('/imgs/logo.svg')}}" alt="">--}}
+                    YJournal
                 </a>
             </li>
             <div class="hide-on-med-and-down">
