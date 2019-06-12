@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab0c073-a7d3-447e-906f-af4901f4b382" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Ads/AdController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Ads/AdController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ads/Ad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ads/Ad.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Ads/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Ads/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/ad.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/ad.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/ads/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/ads/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/ad.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/ad.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ads/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+            <state relative-caret-position="323">
+              <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
             </state>
           </provider>
         </entry>
@@ -111,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Ads/AdController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+            <state relative-caret-position="238">
+              <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
               <folding>
                 <element signature="e#44#75#0#PHP" expanded="true" />
               </folding>
@@ -236,8 +229,8 @@
         <option value="$PROJECT_DIR$/resources/views/layouts/ad.blade.php" />
         <option value="$PROJECT_DIR$/app/helpers.php" />
         <option value="$PROJECT_DIR$/public/css/ad.css" />
-        <option value="$PROJECT_DIR$/resources/views/ads/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Ads/AdController.php" />
+        <option value="$PROJECT_DIR$/resources/views/ads/show.blade.php" />
       </list>
     </option>
   </component>
@@ -672,7 +665,7 @@
       <workItem from="1560187414958" duration="11781000" />
       <workItem from="1560260721551" duration="6374000" />
       <workItem from="1560280140770" duration="7132000" />
-      <workItem from="1560336093546" duration="8426000" />
+      <workItem from="1560336093546" duration="8907000" />
     </task>
     <servers />
   </component>
@@ -709,7 +702,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="503289000" />
+    <option name="totallyTimeSpent" value="503770000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1132,20 +1125,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ads/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="65" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Ads/AdController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="72" column="56" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+        <state relative-caret-position="238">
+          <caret line="71" lean-forward="true" selection-start-line="71" selection-end-line="71" />
           <folding>
             <element signature="e#44#75#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ads/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="29" column="119" selection-start-line="29" selection-start-column="119" selection-end-line="29" selection-end-column="119" />
         </state>
       </provider>
     </entry>

@@ -26,8 +26,8 @@
             <h1>{{$ad->title}}</h1>
             <div class="y-slider">
                 @if($ad->imgs == null)
-                    <div class="no-image">
-                        <img src="https://hoam.ru/img/placeholder.jpg" alt="Изображения нет" data-action="zoom">
+                    <div class="carousel">
+                        <a class="carousel-item"><img src="https://hoam.ru/img/placeholder.jpg" alt="Изображения нет"/></a>
                     </div>
                 @else
                     <div class="carousel">
@@ -63,13 +63,13 @@
             </div>
             <div class="item-comments">
                 <div class="item-share clearfix">
-                    {{--<div class="item-share-group1">--}}
-                        {{--<button class="fav button-2 " data-set-url="https://hoam.ru/aadd/setfavorite/76587" data-remove-url="https://hoam.ru/aadd/removefavorite/76587" data-auth="">В избранное--}}
-                        {{--</button>--}}
+                {{--<div class="item-share-group1">--}}
+                {{--<button class="fav button-2 " data-set-url="https://hoam.ru/aadd/setfavorite/76587" data-remove-url="https://hoam.ru/aadd/removefavorite/76587" data-auth="">В избранное--}}
+                {{--</button>--}}
 
-                    {{--</div>--}}
+                {{--</div>--}}
 
-                    <!-- share -->
+                <!-- share -->
                     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
                     <script src="//yastatic.net/share2/share.js"></script>
                     <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,whatsapp,telegram"></div>
