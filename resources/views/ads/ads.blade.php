@@ -3,15 +3,14 @@
 
 @section('ad')
     <div class="card-panel light lighten-5 z-depth-1">
-        <div class="card-body">
-            <div class="flex ad-header">
-                <div class="">
-                    <h1 class="card-header" style="font-size: 14px; line-height: unset; margin: unset;">Доска объявлений в Ялте</h1>
-                    <span>Самые свежие объявления в Ялте</span>
-                </div>
-                <a href="{{route('ads.create')}}" class="btn site-color">Добавить</a>
+        <div class="flex ad-header">
+            <div class="">
+                <h1 class="card-header" style="font-size: 14px; line-height: unset; margin: unset;">Доска объявлений в Ялте</h1>
+                <span>Самые свежие объявления в Ялте</span>
             </div>
-
+            <a href="{{route('ads.create')}}" class="btn site-color">Добавить</a>
+        </div>
+        <div class="card-body">
             @foreach($ads as $ad)
                 <div class="list-item clearfix desrap" style="position: relative;">
                     <a href="{{route('ads.show', $ad->id)}}" class="ad-image-link">

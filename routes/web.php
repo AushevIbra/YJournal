@@ -13,7 +13,7 @@
 //    var_dump($query->sql, $query->bindings);
 //});
 
-use Laravel\Socialite\Facades\Socialite;
+//use Laravel\Socialite\Facades\Socialite;
 
 Route::get('/', 'HomeController@index')->name('index');
 

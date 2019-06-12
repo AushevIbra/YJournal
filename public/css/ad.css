@@ -115,8 +115,246 @@
 
 .meta span {
     float: right;
+    font-size: .700rem !important;
     color: #9fa5b8;
 }
 
-.desrap {
+.item {
+    padding-top: 20px;
+    margin-top: 20px;
+    border-top: 1px solid #dfdfe5;
+    word-wrap: break-word;
+}
+
+.breadcrumbs {
+    float: left;
+    margin: 4px 10px 20px 0;
+}
+
+.breadcrumbs ul {
+    margin: 0;
+}
+.breadcrumbs li {
+    display: inline;
+}
+.breadcrumbs li a {
+    color: #5d99e0;
+    font-size: .75rem;
+}
+.breadcrumbs li:after {
+    content: '/';
+    display: inline;
+    margin-left: 5px;
+    color: #bfc2cd;
+    font-size: .813em;
+}
+
+.item h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+h1 {
+    margin: .67em 0;
+    font-size: 1.875rem;
+}
+
+.item .y-slider, .item-comments {
+    width: 53%;
+    float: left;
+}
+
+.banner img, .no-image img, .upload img {
+    max-width: 100%;
+}
+
+.item-desc, .item-related {
+    width: 44%;
+    float: right;
+    padding-left: 3%;
+}
+
+.item .y-slider, .item-comments {
+    width: 53%;
+    float: left;
+}
+
+.item .item-price {
+    padding: 8px 15px;
+    margin-bottom: 28px;
+    margin-right: 10px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border: 1px solid #37d89a;
+    float: left;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+}
+
+.item .time-view {
+    float: right;
+    text-align: right;
+    color: #9fa5b8;
+    margin-bottom: 28px;
+}
+
+.item .time-view span {
+    position: relative;
+    float: right;
+    padding-left: 22px;
+}
+
+.item .time-view span:before {
+    content: '';
+    display: block;
+    background: url(../svg/sprite.svg) 0 -326px no-repeat;
+    width: 16px;
+    height: 12px;
+    left: 0;
+    top: 2px;
+    background-size: 200px 620px;
+    position: absolute;
+}
+
+.item .item-specific h4 {
+    margin-bottom: 15px;
+}
+h4 {
+    font-size: 1.125rem;
+}
+
+.item .item-specific p {
+    margin-top: 0;
+    line-height: 18px;
+}
+
+.item .item-specific h4 {
+    margin-bottom: 15px;
+}
+.item dl {
+    margin: 0;
+}
+
+.item .item-phone {
+    clear: both;
+    margin-top: 16px;
+    padding: 8px 15px 8px 35px;
+    border: 1px solid #d7d8e0;
+    position: relative;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -o-border-radius: 4px;
+    -khtml-border-radius: 4px;
+}
+
+.item p.say-about-us-text {
+    margin: 8px 0 16px;
+    color: #9fa5ba;
+}
+.item .item-specific p {
+    margin-top: 0;
+}
+
+.item p.say-about-us-text {
+    margin: 8px 0 16px;
+    color: #9fa5ba;
+}
+
+.item-share {
+    margin-top: 25px;
+}
+
+.item .item-comments .comments-title {
+    margin-top: 30px;
+}
+.item .item-comments h4 {
+    margin: 40px 0 25px;
+}
+.item-desc, .item-related {
+    width: 44%;
+    float: right;
+    padding-left: 3%;
+}
+
+.item .item-phone a {
+    color: #76a7e1;
+    border-bottom: 1px dashed #76a7e1;
+}
+
+@media (max-width: 770px) {
+    .list-text p, .meta {
+        font-size: .813rem;
+    }
+
+    .list-text {
+        margin-left: 115px;
+    }
+
+    .list-item img {
+        margin-bottom: 15px;
+    }
+
+    .list-item img {
+        width: 100px;
+    }
+
+    .list-item-price, .list-item-title a {
+        font-size: .875rem;
+    }
+
+    .meta {
+        padding-left: 115px;
+        font-size: .700rem !important;
+    }
+
+    .h-wrapper menu, .meta .meta-fav {
+        display: none;
+    }
+
+    .item h1 {
+        font-size: 1.5rem;
+    }
+
+    .item .y-slider {
+        margin-bottom: 25px;
+    }
+
+    .item .y-slider, .item-comments, .item-desc, .item-related {
+        width: 100%;
+    }
+    
+
+}
+
+
+@media (max-width: 520px) {
+    .list-item-price {
+        position: relative;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .list-item-title a {
+        margin: 0;
+        width: 100%;
+    }
+
+    .meta {
+        padding-left: 0;
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .row .my {
+        width: 100% !important;
+        margin-left: auto;
+        left: auto;
+        right: auto;
+    }
+
 }
