@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="row">
-        <div class="col m3 hide-on-med-and-down">
+        <div class="col m3">
             @widget('categoryWidget')
         </div>
 
