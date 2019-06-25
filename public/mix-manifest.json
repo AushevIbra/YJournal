@@ -3,5 +3,6 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/ask.js": "/js/ask.js",
-    "/js/comments.js": "/js/comments.js"
+    "/js/comments.js": "/js/comments.js",
+    "/js/job.js": "/js/job.js"
 }

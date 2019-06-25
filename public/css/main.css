@@ -28,6 +28,19 @@ blockquote {
     width: 100% !important;
 }
 
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.no-border {
+    border: none !important;
+}
+.align-items-center {
+    align-items: center !important;
+}
+.border-bottom {
+    border-bottom: 1px solid #ededed;
+}
 .comment-rating {
     display: flex;
     flex-direction: column;

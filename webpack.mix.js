@@ -14,5 +14,6 @@ const mix = require('laravel-mix');
 mix.react('resources/js/app.js', 'public/js')
     .react('resources/js/comments.js', 'public/js')
     .react('resources/js/ask.js', 'public/js')
+    .react('resources/js/job.js', 'public/js')
     .react('resources/js/components/answers/answers.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css');

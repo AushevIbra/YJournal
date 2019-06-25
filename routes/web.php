@@ -52,6 +52,11 @@ Route::group(['prefix' => 'board'], function (){
     Route::resource('ads', 'Ads\AdController');
 });
 
+Route::group(['prefix' => 'job'], function (){
+    Route::get('/', 'JobController@jobs')->name('jobs');
+    Route::resource('jobs', 'JobController');
+});
+
 
 Route::group(['prefix' => 'api'], function (){
     Route::group(['prefix' => 'comments'], function () {
